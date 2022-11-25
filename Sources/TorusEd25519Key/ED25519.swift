@@ -11,7 +11,7 @@ public struct ED25519 {
         var sk = privateKey.hexa
 
         guard sk.count == 32 else {
-            throw TorusTweetNaclError.invalidKeySize
+            throw TorusEd25519KeyError.invalidKeySize
         }
 
         sk.append(contentsOf: [UInt8](repeating: 0, count: 32))
@@ -23,10 +23,6 @@ public struct ED25519 {
             pk: sk
         )
     }
-}
-
-enum TorusTweetNaclError:Error{
-    case invalidKeySize
 }
 
 

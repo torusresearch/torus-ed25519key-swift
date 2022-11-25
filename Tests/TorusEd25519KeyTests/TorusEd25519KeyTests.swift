@@ -10,12 +10,12 @@ class ED25519Tests: XCTestCase {
         }
 
         XCTAssertTrue(
-            thrownError is TorusTweetNaclError,
+            thrownError is TorusEd25519KeyError,
             "Unexpected error type: \(type(of: thrownError))"
         )
 
         // Verify that our error is equal to what we expect
-        XCTAssertEqual(thrownError as? TorusTweetNaclError, .invalidKeySize)
+        XCTAssertEqual(thrownError as? TorusEd25519KeyError, .invalidKeySize)
     }
 
     func testThatValidKeyReturnsEd25519KeyPair() throws {
