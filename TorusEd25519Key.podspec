@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/torusresearch/torus-ed25519key-swift.git', :tag => s.version.to_s }
   s.ios.deployment_target  = "13.0"
   s.osx.deployment_target  = "10.15"
-  s.source_files = "Sources/TorusEd25519Key/*.{swift}""
+  s.source_files = "Sources/TorusEd25519Key/*.{swift}"
   s.dependency 'TweetNacl', '~> 1.0.0'
 end
